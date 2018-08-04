@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/profile_view"
+            android:icon="@drawable/googleg_standard_color_18"
+            android:title="View Profile" />
+        <item
+            android:id="@+id/settings_view"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Scan a book" />
+        <item
+            android:id="@+id/logout_view"
+            android:icon="@mipmap/action_log_out"
+            android:title="Logout" />
+    </group>
+
+</menu>

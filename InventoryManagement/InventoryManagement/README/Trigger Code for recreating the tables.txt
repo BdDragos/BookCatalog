@@ -1,0 +1,17 @@
+CREATE TRIGGER User_Delete ON UserData
+	INSTEAD OF DELETE
+	AS
+	BEGIN
+
+		-- PERFORM THE DELETES ON FAMILY RELATIVE
+		DELETE  User_Relationship
+		FROM    User_Relationship fr
+				INNER JOIN deleted d
+					ON d.ID IN (fr.userMainID, fr.userRelationID);
+
+		-- PERFORM THE DELETES ON PEOPLE
+		DELETE UserData
+		WHERE ID IN (SELECT d.ID FROM deleted d);
+
+	END
+GO
