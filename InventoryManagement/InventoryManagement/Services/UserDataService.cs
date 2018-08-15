@@ -277,7 +277,7 @@ namespace InventoryManagement.Services
             else
             {
                 string mailBodyhtml = "<p>Your account with the email " +  foundUser.email  + " has the following password: " + foundUser.userpass + " </p>";
-                var msg = new MailMessage("dragosbad2009@gmail.com", userEmail);
+                var msg = new MailMessage("My email", userEmail);
 
                 msg.Subject = "BookDeposit Account Recovery";
                 msg.Body = "Hello. Your account with the email " + foundUser.email + " has the following password: " + foundUser.userpass + ". After logging in please change the password";
